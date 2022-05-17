@@ -1,0 +1,118 @@
+# Consumer Behavior
+
+## The Axioms of Rational Choice
+
+In order to make models for how consumers behave, we need to assume that they will act in a rational manner. In simple terms, this means that the consumers act in a consistent and predictable way. If consumer behavior were completely random and unpredictable, it would be impossible for us to model how they operate.
+
+### Preference Relations {-}
+
+Before we cover the main assumptions for rational behavior, we should take a look at the symbols we use to summarize a consumer's preference for different goods.
+
+Let's say Karan has a choice between apples and oranges. If Karan always picks apples over oranges, we can say that he *strictly prefers* apples to oranges. Using symbols we rewrite this as $Apples \succ Oranges$.
+
+If a consumer strictly prefers good *a* over good *b*, we write: 
+$$a \succ b$$ 
+
+If Karan likes apples and oranges equally, we can say he is *indifferent* to the goods. We can then rewrite this as $Apples \sim Oranges$.
+
+If a consumer is indifferent between the two, we write:
+$$a \sim b$$
+
+Lastly, if Karan likes his apples at least as much as he likes oranges, we can say that he *weakly prefers* apples to oranges. Using symbols we rewrite this as $Apples \succsim Oranges$.
+
+If a consumer weakly prefers good *a* over good *b*, we write:
+$$a \succsim b$$
+**Why don't we just use normal inequality symbols? **
+
+We use special preference symbols instead of regular inequalities because preferences aren't really quantifiable. We can say for sure that $2 \gt 1$, but we can't say $Apples \gt Oranges$ because it's not absolute. Karan might like Apples more than Oranges, but Sarah might feel the opposite way.
+
+### Completeness 
+
+Our consumer, Karan, should be able to rank his preference for apples versus oranges; he can say he is indifferent or that he prefers one over the other.
+
+For a set of goods, *a* and *b*, a consumer can rank their preferences, for example:
+$$a \succ b \quad or \quad a \sim b$$
+
+### Transitivity 
+
+If Karan likes apples more than oranges and likes oranges more than bananas, then Karan must like apples more than bananas.
+
+If a consumer prefers *a* more then *b* and *b* more than *c*, then they must prefer *a* over *c*. 
+$$if \quad a \succ b \quad and \quad b \succ c \implies a \succ c$$
+
+### Continuity 
+
+If Karan likes Pink Lady apples more than oranges, he should also like Honeycrisp apples more than oranges because the two apples are so similar.
+
+If a consumer prefers *a* to *b*, they should also prefer goods almost identical to *a* to *b*.
+$$if \quad a \succ b \quad and \quad a \sim a^{\prime} \implies a^{\prime} \succ b$$
+
+### More is Better
+
+Karan will prefer having 100 apples to just 1. 
+
+A consumer will always be happier with having more of a particular good.
+
+---
+
+## Utility Functions
+
+To build quantitative models for consumer behavior, we need to have a method of assigning numerical values to different situations. The **utility function** gives us a way to organize consumers' preferences by attaching numerical values to them.
+
+A utility function is typically of the form $U(input)= output$. The input is some consumable such as a bundle of goods, and the output is a numerical value assigned to that input, measured in utils.
+
+### The Arguments of a Utility Function
+
+The inputs of a utility function can vary significantly because there are so many different situations or goods that we can compare and rank.
+ 
+The most common input is $q$, the quantity of a good or multiple goods. The function here measures levels of utility given by the different combinations of goods that an individual consumes.
+$$U(q_1, q_2, ... \thinspace ,q_n)$$
+
+Another input is the combination of consumption, $C$, and leisure, $H$, where you can measure the levels of utility provided by different combinations of consumption and leisure; the amount consumed is directly related to the amount of time spent working (not spent leisurely) because greater hours worked implies more money available to consume goods and services.
+$$U(C,H)$$
+
+A more interesting utility function exists when an individual is *altruistic*, meaning they care for the wellbeing of another. This utility function would consider the consumption of the individual and the consumption of whoever they care about.
+$$U(C_{individual}, C_{others})$$
+
+---
+
+## Visualizing a Utility Function
+
+In order to build some intuition about what exactly a utility function does, we should look at graphs to explore their structure.
+
+Let's take a utility function with the inputs being 2 different goods, $x$ and $y$, of the following form:
+$$U(x,y)=x \times y$$
+
+### Surface Plot
+
+```{r, include=FALSE}
+library(mosaic)
+library(mosaicCalc)
+```
+
+```{r surface-plot, echo=FALSE, fig.cap="A surface plot of the utility function. Drag around on the graph to get a better look at the shape."}
+u <- makeFun(x*y ~ x&y)
+interactive_plot(u, domain(x = 1:100, y= 1:100), type = "surface")
+```
+
+The surface plot provides a great way of exploring exactly how our function looks, but it can be impractical if not impossible to show on a piece of paper. As an alternative, we can use **contour plots**.
+
+### Contour Plot
+
+```{r contour-fill, echo=FALSE, fig.cap="A filled contour plot of the utility function."}
+u <- makeFun(x*y ~ x&y)
+interactive_plot(u, domain(x = 1:100, y= 1:100), type = "contour")
+```
+A filled contour plot can be thought of as a surface plot that has been flattened to fit on a 2D plane. The color of the regions represents the value of utility changing based on the $x$ and $y$ values. The distinct lines each correspond to one constant value of the utility, $\bar{U}$. 
+
+```{r contour-line, echo=FALSE, fig.cap="A line contour plot of the utility function"}
+contour_plot(x*y~x&y, domain(x = 1:100, y = 1:100))
+```
+Taking the fill away leaves us with a plot that gives us a rough outline of what the utility function really looks like. These lines represent a constant value of utility, showing us the different bundles of good $x$ and $y$ that an individual can consume at a given $\bar{U}$.
+
+### Combined Plot
+
+```{r combo-plot, echo=FALSE, fig.cap="A combined plot of the utility function projecting contours onto its surface."}
+interactive_plot(u, domain(x = 1:100, y= 1:100), type = "both")
+```
+Just in case the contour plot wasn't completely clear, this figure shows the plot shown in *Figure \@ref(fig:surface-plot)* with the contours in *Figure \@ref(fig:contour-line)* projected up where they belong on the surface.

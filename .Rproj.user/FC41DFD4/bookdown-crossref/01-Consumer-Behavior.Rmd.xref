@@ -1,0 +1,18 @@
+h1:consumer-behavior Consumer Behavior
+h2:the-axioms-of-rational-choice The Axioms of Rational Choice
+h3:preference-relations Preference Relations
+h3:completeness Completeness
+h3:transitivity Transitivity
+h3:continuity Continuity
+h3:more-is-better More is Better
+h2:utility-functions Utility Functions
+h3:the-arguments-of-a-utility-function The Arguments of a Utility Function
+h2:visualizing-a-utility-function Visualizing a Utility Function
+h3:surface-plot Surface Plot
+fig:surface-plot A surface plot of the utility function. Drag around on the graph to get a better look at the shape.
+h3:contour-plot Contour Plot
+fig:contour-fill A filled contour plot of the utility function.
+fig:contour-line A line contour plot of the utility function
+h3:combined-plot Combined Plot
+fig:combo-plot A combined plot of the utility function projecting contours onto its surface.
+

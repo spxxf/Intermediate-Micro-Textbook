@@ -1,0 +1,1 @@
+"0","contour_plot(x*y~x&y, domain(x = 1:100, y = 1:100))"

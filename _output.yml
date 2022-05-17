@@ -2,7 +2,7 @@ bookdown::bs4_book:
   css: style.css
   theme:
     bootswatch: journal
-  repo: https://github.com/rstudio/bookdown-demo
+  repo: https://github.com/spxxf/Intermediate-Micro-Textbook
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

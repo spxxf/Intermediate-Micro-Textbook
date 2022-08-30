@@ -1,4 +1,4 @@
-book_filename: "Intermediate_Microeconomics"
+book_filename: "Interactive Microeconomics"
 new_session: true
 before_chapter_script: _common.R
 delete_merged_file: true

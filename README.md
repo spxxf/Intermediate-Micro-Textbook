@@ -1,15 +1,13 @@
-# Welcome! 
+Welcome! 
 
-### Goal
-This project aims to build an online textbook that any student can use to develop an intuition for topics in their intermediate-level microeconomics course through the use of animations and interactive graphs.
+This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
 
-### References
-This book is being written using Professor Jennifer Hunt's lecture notes for 01:220:320, Intermediate Microeconomics, at Rutgers and Perloff's 5th edition of *Microeconomics Theory and Applications with Calculus* as references.
+This template provides a skeleton file structure that you can edit to create your book. 
 
-The project is being written with [R Markdown](https://rmarkdown.rstudio.com/), and the plots will be made using a mix of [Plotly](https://plotly.com/) and [ggplot](https://ggplot2.tidyverse.org/index.html).
+The contents inside the .Rmd files provide some pointers to help you get started, but feel free to also delete the content in each file and start fresh.
 
-### Warning
-This book is not meant to replace a course textbook; it is designed to supplement a primary reading source so students can build confidence on more complex topics.
+Additional resources:
 
-You can find the book [here](https://bookdown.org/yogigohel/Intermediate_Microeconomics/)
+The **bookdown** book: https://bookdown.org/yihui/bookdown/
 
+The **bookdown** package reference site: https://pkgs.rstudio.com/bookdown

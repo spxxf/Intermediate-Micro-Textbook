@@ -1,2 +1,0 @@
-"0","u <- makeFun(x*y ~ x&y)"
-"0","interactive_plot(u, domain(x = 1:100, y= 1:100), type = ""contour"")"

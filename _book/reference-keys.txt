@@ -1,13 +1,6 @@
-fig:surface-plot
-fig:contour-fill
-fig:contour-line
-fig:combo-plot
-fig:nice-fig
-tab:nice-tab
-eq:binom
-thm:tri
 consumer-behavior
 the-axioms-of-rational-choice
+preference-relations
 completeness
 transitivity
 continuity
@@ -18,6 +11,9 @@ visualizing-a-utility-function
 surface-plot
 contour-plot
 combined-plot
+indifference-curves
+the-indifference-map
+marginal-utility
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables
